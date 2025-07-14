@@ -1,0 +1,186 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+
+/* Body Styles */
+body {
+    font-family: 'Libre Baskerville', serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+.Header {
+    width: 100%;
+    padding: 40px 0;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.Header h1 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    margin-bottom: 15px;
+}
+
+.Header .subtitle {
+    font-size: clamp(0.9rem, 3vw, 1.2rem);
+    opacity: 0.9;
+}
+
+/* Main Content Container */
+.main-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Quote Grid Layout */
+.quote-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    justify-items: center;
+}
+
+/* Quote Card Styles */
+.Quote-Card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.Quote-Card:hover {
+    transform: translateY(-5px);
+}
+
+.Img1 {
+    width: 100%;
+    height: auto;
+    max-height: 566px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.Quote-Card h2 {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    padding: 0 20px 10px;
+    margin-top: 10px;
+}
+
+.Quote-Card p {
+    color: #7f8c8d;
+    padding: 0 20px 20px;
+    font-size: 1.4rem;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 60px;
+    width: 100%;
+}
+
+.foot {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+footer h5 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.whatsapp-link {
+    color: #25D366;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-link:hover {
+    color: #128C7E;
+    text-decoration: underline;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .quote-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .Header {
+        padding: 30px 0;
+        margin-bottom: 30px;
+    }
+    
+    .Quote-Card {
+        margin-bottom: 30px;
+        max-width: 100%;
+    }
+    
+    .Img1 {
+        padding: 15px;
+    }
+}
+
+/* Fix for class names with spaces */
+[class="Quote Card"] {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+[class="Quote Card"]:hover {
+    transform: translateY(-5px);
+}
+
+/* Added paragraph styling for the space-separated class name */
+[class="Quote Card"] p {
+    color: #7f8c8d;
+    padding: 0 20px 20px;
+    font-size: 1.4rem;
+}
